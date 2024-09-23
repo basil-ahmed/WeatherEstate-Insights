@@ -1,6 +1,6 @@
 # WeatherEstate Insights
 
-### Real Estate Price Trends Based on Weather Conditions
+### Real Estate Price Trends Based on Real Time Weather Conditions
 
 ---
 
