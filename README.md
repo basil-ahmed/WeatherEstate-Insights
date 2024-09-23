@@ -21,10 +21,6 @@ By scraping property listing data from **Property Finder** and fetching historic
 
 ---
 
-Here is the updated section for your **README.md**:
-
----
-
 ## Data Collection
 
 ### Description of Data Gathered
