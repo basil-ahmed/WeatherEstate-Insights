@@ -21,24 +21,51 @@ By scraping property listing data from **Property Finder** and fetching historic
 
 ---
 
-## Data Sources
+Here is the updated section for your **README.md**:
 
-### 1. **Property Finder** 
-- **Website**: [Property Finder](https://www.propertyfinder.ae)
-- **Data Extracted**:
-  - Property Price
-  - Location (City/Neighborhood)
-  - Number of Bedrooms
-  - Area (in square feet)
-  - Property Type (e.g., Apartment, Villa)
+---
 
-### 2. **Visual Crossing Weather API**
-- **API Documentation**: [Visual Crossing Weather API](https://www.visualcrossing.com/weather-api)
-- **Data Extracted**:
-  - Average Temperature (in Celsius)
-  - Humidity (%)
-  
-These data sources are combined to create a comprehensive dataset for trend analysis.
+## Data Collection
+
+### Description of Data Gathered
+
+This project gathers two main types of data:
+
+1. **Real Estate Data (from Property Finder)**
+    - **Data Extracted**:
+        - **Price**: The listing price of the property in AED.
+        - **Location**: The neighborhood or city where the property is located.
+        - **Bedrooms**: The number of bedrooms in the property.
+        - **Area**: The size of the property in square feet.
+        - **Property Type**: Type of property (e.g., Apartment, Villa, etc.).
+
+   **Purpose**: Property Finder was chosen for its comprehensive coverage of real estate listings across different locations in the UAE. The platform provides granular details about various properties that allow for robust data analysis, such as price trends and property characteristics in specific neighborhoods. Scraping this data enables the generation of unique insights into how the real estate market varies across different regions.
+
+2. **Weather Data (from Visual Crossing Weather API)**
+    - **Data Extracted**:
+        - **Average Temperature**: Historical average temperature for the location.
+        - **Humidity**: Historical humidity levels for the location.
+        
+   **Purpose**: The weather API was chosen to understand the impact of environmental conditions, such as temperature and humidity, on real estate pricing. The weather data allows us to explore correlations between climatic factors and property desirability, thus adding a new layer of insight to real estate analysis.
+
+### Value Proposition of the Dataset
+
+The dataset created by this project merges two critical pieces of information—real estate prices and weather data—which are not readily available together in publicly accessible datasets. Here's the value it offers:
+
+- **Unique Cross-Domain Insights**: Combining real estate prices with environmental factors provides insights into how weather conditions might affect property demand and value, which is especially relevant in regions with extreme climates, like the UAE. 
+- **Actionable for Stakeholders**: 
+    - **Property Investors** can leverage the dataset to make more informed decisions by identifying patterns between climate and property value.
+    - **Real Estate Developers** can use the data to understand how the weather might influence construction trends or buyer preferences in certain areas.
+    - **Researchers** can utilize this dataset for studying the socio-economic impacts of climate on urban development.
+
+### Why Such a Dataset Is Not Freely Available
+
+While real estate data or weather data might be available individually through certain platforms or APIs, a combined dataset that links real estate listings to weather patterns is not typically available for free for several reasons:
+
+- **Data Silos**: Real estate platforms focus on property data while weather platforms focus on environmental data. There is rarely an incentive for these separate industries to collaborate and offer integrated datasets.
+- **Specialized Demand**: The intersection of weather conditions and real estate prices is a niche area of analysis. Due to its specialized nature, only a limited number of platforms may create such datasets, often offering them as premium services.
+
+By creating this combined dataset, the project offers a unique tool for those who wish to gain deeper insights into real estate trends in relation to weather conditions.
 
 ---
 
@@ -88,7 +115,7 @@ pip install -r requirements.txt
 You'll need to sign up for an account on [Visual Crossing](https://www.visualcrossing.com/weather-api) and get your API key. Once you have the key, create a `.env` file in the root of your project and add your key:
 
 ```bash
-VISUAL_CROSSING_API_KEY=your_api_key_here
+WEATHER_API_KEY=your_api_key_here
 ```
 
 ### 5. Run the Script
@@ -113,8 +140,7 @@ WeatherEstate-Insights/
 ├── README.md                   # Project documentation
 ├── ETHICS.md                   # Ethical considerations
 ├── .gitignore                  # Files to be ignored by Git
-├── data/                       # Directory to store datasets
-│   └── property_listings_with_weather.csv  # The cleaned dataset
+├── property_listings_with_weather.csv  # The cleaned dataset
 └── .env                        # Environment variables (store your API key here)
 ```
 
