@@ -85,7 +85,7 @@ The final dataset will include the following columns:
 To get started, clone the repository:
 
 ```bash
-git clone https://github.com/your-username/WeatherEstate-Insights.git
+git clone https://github.com/basil-ahmed/WeatherEstate-Insights.git
 cd WeatherEstate-Insights
 ```
 
